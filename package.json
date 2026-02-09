@@ -1,9 +1,5 @@
 {
   "name": "@riverbraid/crypto-gold",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "node index.js"
-  }
+  "version": "1.1.0",
+  "type": "module"
 }
