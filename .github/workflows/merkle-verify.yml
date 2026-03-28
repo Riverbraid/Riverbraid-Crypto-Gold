@@ -1,0 +1,20 @@
+name: Merkle Verification
+on: [push]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch Truth
+        run: curl -s https://raw.githubusercontent.com/Riverbraid/Riverbraid-Golds/main/TRUTH.md -o TRUTH.md
+      - name: Verify
+        run: |
+          CURRENT_HASH=$(find . -type f -not -path '*/.*' -not -path './node_modules/*' -exec sha256sum {} + | sort | sha256sum | awk '{print $1}')
+          EXPECTED_HASH=$(grep "Crypto-Gold" TRUTH.md | grep -oE "[0-9a-f]{64}" | head -n 1)
+          echo "Comparing Current: $CURRENT_HASH"
+          echo "Against Manifest: $EXPECTED_HASH"
+          if [ "$CURRENT_HASH" != "$EXPECTED_HASH" ]; then
+            echo "FREQUENCY DISTORTION DETECTED"
+            exit 1
+          fi
+          echo "COHERENCE ACHIEVED"
