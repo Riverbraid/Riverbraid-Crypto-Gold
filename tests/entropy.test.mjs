@@ -8,11 +8,11 @@ try {
   const hashB = anchor(stringB);
 
   if (hashA === hashB) {
-    console.log("✅ ZERO-ENTROPY_VERIFIED");
+    console.log(" ZERO-ENTROPY_VERIFIED");
     console.log(`Common Hash: ${hashA}`);
     process.exit(0);
   } else {
-    console.error("❌ ENTROPY_LEAK: Non-deterministic hashes.");
+    console.error(" ENTROPY_LEAK: Non-deterministic hashes.");
     process.exit(1);
   }
 } catch (e) {
