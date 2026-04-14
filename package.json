@@ -1,16 +1,9 @@
 {
-  "name": "riverbraid-crypto-gold",
-  "version": "1.5.0",
+  "name": "Riverbraid-Crypto-Gold",
+  "version": "1.5.1",
   "private": true,
   "type": "module",
   "scripts": {
-    "snapshot": "node run-vectors.cjs snapshot",
-    "verify": "node run-vectors.cjs verify",
-    "prestart": "node gatekeeper.cjs",
-    "prebuild": "node gatekeeper.cjs"
-  },
-  "engines": {
-    "node": "20.11.0"
-  },
-  "description": "Cryptographic anchoring and verification surface for the Riverbraid system."
+    "verify": "node run-vectors.cjs verify"
+  }
 }
