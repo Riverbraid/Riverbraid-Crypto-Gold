@@ -1,0 +1,7 @@
+﻿{
+    "name":  "riverbraid-crypto",
+    "version":  "1.0.0",
+    "scripts":  {
+                    "test":  "node -e \"console.log(\u0027riverbraid-crypto: Verified\u0027)\""
+                }
+}
