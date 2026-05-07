@@ -1,0 +1,13 @@
+{
+  "schema": "riverbraid.gold.verify.output",
+  "version": "1.0.0",
+  "repo": "Riverbraid-Crypto-Gold",
+  "ring": 1,
+  "petal": "Crypto-Gold",
+  "invariant": "CRYPTOGRAPHIC_INTEGRITY",
+  "status": "VERIFIED",
+  "digest": "a2e18331c26caabcd8809f02c7856c06d2fc9edbead6ed9daa0aa9816927820a",
+  "expected_digest": "a2e18331c26caabcd8809f02c7856c06d2fc9edbead6ed9daa0aa9816927820a",
+  "canonical_signal": "crypto:a2e18331c26caabc",
+  "canonical_reason": "SHA 256 digest is lowercase 64 character hexadecimal"
+}

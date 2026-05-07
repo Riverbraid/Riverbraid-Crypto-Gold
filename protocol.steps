@@ -1,0 +1,28 @@
+{
+  "schema": "riverbraid.gold.protocol.steps",
+  "version": "1.0.0",
+  "repo": "Riverbraid-Crypto-Gold",
+  "ring": 1,
+  "petal": "Crypto-Gold",
+  "invariant": "CRYPTOGRAPHIC_INTEGRITY",
+  "canonical_input": {
+    "text": "Riverbraid Gold Integrity"
+  },
+  "expected_digest": "a2e18331c26caabcd8809f02c7856c06d2fc9edbead6ed9daa0aa9816927820a",
+  "steps": [
+    "receive canonical input object",
+    "require input.text to be a string",
+    "encode input.text as UTF 8",
+    "compute SHA 256 digest",
+    "verify lowercase 64 character hexadecimal digest",
+    "emit deterministic verification output"
+  ],
+  "forbidden": [
+    "Date",
+    "Math.random",
+    "randomUUID",
+    "timestamps",
+    "absolute paths",
+    "environment dependent values"
+  ]
+}
